@@ -1,17 +1,31 @@
+// O(n) runtime
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] === complement) return true;
+    }
+  }
+  return false;
 }
-
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
+  if array(x).sum === array(x).sum?
+  return true 
+  if array (x).sum =/ return false 
+
+
 */
 
 /*
   Add written explanation of your solution here
+  The function needs to true if any pair of numbers in the 
+  array adds up to the target number. how do i add each number indivudally? 
+  
 */
 
 // You can run `node index.js` to view these console logs
